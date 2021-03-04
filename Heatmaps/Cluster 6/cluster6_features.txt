@@ -1,0 +1,82 @@
+wc : 0.05
+Clout : 0.11
+Authentic: 0.045
+Tone: 0.14
+Dic: 0.2
+pronoun: 0.039
+
+ppron: 0.13
+i: 0.0072
+you: 0.12
+shehe:0.14
+they:0.15
+auxverb: 0.026
+
+negate: 0.1
+verb:0.11
+adj : 0.078
+compare: 0.029
+Interrog: 0.035
+number: 0.1
+quant: 0.067
+affect:0.19
+
+posemo: 0.2
+negemo: 0.087
+anx:0.038
+anger:0.084
+sad:0.13
+social:0.19
+family:0.061
+family:0.061
+friend:0.055
+female:0.086
+male:0.18
+
+cogprog: 0.093
+insight:0.14
+
+tentat:0.012
+certain:0.11
+differ:0.05
+percept:0.068
+see:0.063
+hear:0.037
+
+bio: 0.072
+body:0.11
+sexual:0.1
+drives:0.018
+achieve:0.02
+power:0.045
+
+reward:0.11
+risk:0.0045
+focuspast: 0.02
+focuspresent: 0.076
+relativ: 0.0087
+motion: 0.012
+time: 0.056
+
+home: 0.012
+money: 0.0038
+relig:0.017
+informal:0.071
+swear:0.072
+netspeak: 0.015
+assent:0.12
+
+filler: 0.03
+AllPunc: 0.13
+Period: 0.033
+Comma: 0.0053
+Colon: 0.092
+SemiC: 0.044
+QMark: 0.13
+Exclaim: 0.16
+Quote: 0.16
+
+Apostro: 0.084
+Parenth:0.07
+OtherP: 0.15
+duration:0.067

@@ -1,0 +1,8 @@
+METRIC      P-VALUE
+====================
+number      0.038456
+cause       0.069490
+leisure     0.039940
+focusfuture 0.05
+death       0.043534
+male        0.049835
