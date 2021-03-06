@@ -28,7 +28,7 @@ def linear_regression():
     print(lr_model.summary())
 
 def nn_classify():
-    c6 = pd.read_csv("./cluster6_modified.csv")
+    c6 = pd.read_csv("./cluster0_modified.csv")
     avg_views =  np.mean(c6['views'].values.ravel())
     #med_views = np.median(c6['views'].values.ravel())
     is_successful = (c6['views'] > avg_views)
@@ -54,9 +54,13 @@ def nn_classify():
     y_hat = (y_hat > 0.5) 
     avg_acc = accuracy_score(y_test, y_hat)
     print(f"Average Accuracy for AVERAGE VIEWS: {avg_acc}")
+    return avg_acc
     #print(f"Average Accuracy for MEDIAN VIEWS: {median_acc}")
 
 
 if __name__ == "__main__":
-    nn_classify()
+    accuracies = []
+    for i in range(30):
+        accuracies.append(nn_classify())
+    print(f"Average Accuracy: {sum(accuracies) / len(accuracies)}")
 
