@@ -18,6 +18,7 @@ focusfuture 0.05
 death       0.043534
 male        0.049835
 """
+
 def linear_regression():
     c6 = pd.read_csv("./combined_cluster6.csv")
     y = c6[['views']]
@@ -29,6 +30,7 @@ def linear_regression():
 def nn_classify():
     c6 = pd.read_csv("./cluster6_modified.csv")
     avg_views =  np.mean(c6['views'].values.ravel())
+    #med_views = np.median(c6['views'].values.ravel())
     is_successful = (c6['views'] > avg_views)
     c6['is_successful'] = is_successful
     y = c6['is_successful'].values
@@ -50,8 +52,9 @@ def nn_classify():
     nn.fit(X_train, y_train, verbose=0, epochs=100)
     y_hat = nn.predict(X_test)
     y_hat = (y_hat > 0.5) 
-    acc = accuracy_score(y_test, y_hat)
-    print(acc)
+    avg_acc = accuracy_score(y_test, y_hat)
+    print(f"Average Accuracy for AVERAGE VIEWS: {avg_acc}")
+    #print(f"Average Accuracy for MEDIAN VIEWS: {median_acc}")
 
 
 if __name__ == "__main__":
