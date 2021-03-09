@@ -75,7 +75,7 @@ def gen_wordclouds(wordcount_list):
         wc.generate(cluster)
         plt.subplot(4, 4, index+1)
         plt.imshow(wc, interpolation="bilinear")
-        plt.axis("on")
+        plt.axis("off")
         plt.title(full_names[index])
     plt.show()
         #print(index)
