@@ -12,14 +12,14 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import statsmodels.api as sm
 
-cluster = pd.read_csv("./combined_cluster4.csv").drop(labels=['published_date',
+cluster = pd.read_csv("./combined_cluster0.csv").drop(labels=['published_date',
                                                                'ratings',
                                                                'languages', 
-                                                               'Unnamed: 0',
+                                                               #'Unnamed: 0',
                                                                'description'
                                                                ],axis=1)
 y = cluster[['views']]
-X = cluster.iloc[:, 2:-15].drop(labels=['comments', 'Unnamed: 0.1'], axis=1)
+X = cluster.iloc[:, 2:-15]#.drop(labels=['comments', 'Unnamed: 0.1'], axis=1)
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3)
 
 
@@ -77,7 +77,7 @@ def filter_features():
     #plt.show()
 
 if __name__ == "__main__":
-    #filter_features()
+    filter_features()
     X_1 = sm.add_constant(X)
     model = sm.OLS(y, X_1).fit()
     #print(type(model.pvalues))

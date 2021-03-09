@@ -34,7 +34,7 @@ def nn_classify():
     is_successful = (c6['views'] > avg_views)
     c6['is_successful'] = is_successful
     y = c6['is_successful'].values
-    X = c6.drop(labels=['views', 'is_successful'], axis=1)
+    X = c6.drop(labels=['views', 'is_successful', 'comments'], axis=1)
     input_dims = X.shape[1]
     X = X.values
     ss = StandardScaler()
