@@ -1,1 +1,0 @@
-# IMT574_TedTalk
